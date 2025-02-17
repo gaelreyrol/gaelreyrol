@@ -11,5 +11,5 @@ charset = utf-8
 trim_trailing_whitespace = false
 insert_final_newline = false
 
-[*.{nix,yaml,yml,json}]
+[*.{nix,yaml,yml,json,libsonnet,jsonnet}]
 indent_size = 2

@@ -1,7 +1,0 @@
-helmfiles:
-  - path: apps/*/helmfile.yaml
-
-lockFilePath: .helmfile.{{ .Environment.Name}}.lock
-
-environments:
-  default: {}

@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "grafana.vscode-jsonnet",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "redhat.vscode-yaml",
+        "hashicorp.terraform"
+    ]
+}

@@ -1,6 +1,4 @@
 {
-  description = "Gaël's everything's repository";
-
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -23,18 +21,16 @@
               helm-git
             ];
           });
-          helmfile = pkgs.helmfile-wrapped.override {
-            inherit (helm) pluginsDir;
-          };
         in pkgs.mkShell {
           buildInputs = [
-            pkgs.terraform
             pkgs.yq-go
             pkgs.kind
             pkgs.kubectl
-            pkgs.kustomize
             helm
-            helmfile
+            pkgs.go-jsonnet
+            pkgs.jsonnet-bundler
+            pkgs.gojsontoyaml
+            pkgs.tanka
           ];
         };
       };

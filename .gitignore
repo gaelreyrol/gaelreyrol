@@ -1,2 +1,5 @@
 .direnv
 .kube
+vendor
+result
+charts
