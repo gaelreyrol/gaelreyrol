@@ -3,6 +3,7 @@
         "grafana.vscode-jsonnet",
         "ms-kubernetes-tools.vscode-kubernetes-tools",
         "redhat.vscode-yaml",
-        "hashicorp.terraform"
+        "hashicorp.terraform",
+        "nefrob.vscode-just-syntax"
     ]
 }

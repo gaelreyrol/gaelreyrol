@@ -1,0 +1,16 @@
+{
+  "CN": "kind.gaelreyrol.dev",
+  "names": [
+    {
+      "C":  "FR",
+      "L":  "Lille",
+      "O":  "Gaël Reyrol",
+      "OU": "Kind",
+      "ST": "Nord"
+    }
+  ],
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  }
+}

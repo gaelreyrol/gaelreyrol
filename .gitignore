@@ -1,5 +1,17 @@
 .direnv
 .kube
+.mc
+.aider/*
+.aider.tags*
+
 vendor
 result
 charts
+output
+data
+
+.pre-commit-config.yaml
+*.pem
+*.csr
+1password-credentials.json
+1password-token.jwt

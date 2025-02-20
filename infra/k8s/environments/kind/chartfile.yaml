@@ -1,0 +1,8 @@
+directory: charts
+repositories:
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+requires:
+  - chart: bitnami/minio
+    version: 15.0.4
+version: 1

@@ -1,19 +1,21 @@
-local kp =
-  (import './config.libsonnet') +
-  (import 'kube-prometheus/main.libsonnet') +
-  {
-    local c = $._config.monitoring,
+{
+  values:: {
+    enabled: true,
+    namespace: 'monitoring',
+    kubePrometheus: {
+      mixins: {},
+    },
+  },
+
+  local kp = (import 'kube-prometheus/main.libsonnet') + {
     values+:: {
       common+: {
-        namespace: c.namespace,
+        namespace: $.values.namespace,
       },
-    } + c.kubePrometheus.mixins,
-  };
+    } + $.values.kubePrometheus.mixins,
+  },
 
-
-(import './config.libsonnet') + {
-  local c = $._config.monitoring,
-  kubePrometheus: if !c.enabled then {} else
+  kubePrometheus: if !$.values.enabled then {} else
     { 'setup/0namespace-namespace': kp.kubePrometheus.namespace }
     + {
       ['setup/prometheus-operator-' + name]: kp.prometheusOperator[name]

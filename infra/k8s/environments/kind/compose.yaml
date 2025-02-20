@@ -1,0 +1,6 @@
+services:
+  cloud-provider:
+    image: registry.k8s.io/cloud-provider-kind/cloud-controller-manager:v0.6.0
+    network_mode: kind
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

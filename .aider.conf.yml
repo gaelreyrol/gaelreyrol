@@ -1,0 +1,8 @@
+gitignore: false
+model: "mistral/codestral-latest"
+cache-prompts: true
+editor: "zeditor --wait"
+read:
+  - infra/k8s/CONVENTIONS.md
+input-history-file: .aider/.aider.input.history
+chat-history-file: .aider/.aider.chat.history.md

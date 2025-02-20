@@ -2,11 +2,12 @@
   "apiVersion": "tanka.dev/v1alpha1",
   "kind": "Environment",
   "metadata": {
-    "name": "environments/system/kind"
+    "name": "environments/kind"
   },
   "spec": {
-    "namespace": "kube-system",
-    "resourceDefaults": {},
-    "expectVersions": {}
+    "apiServer": "https://127.0.0.1:6443",
+    "namespace": "default",
+    "injectLabels": true,
+    "applyStrategy": "server"
   }
 }

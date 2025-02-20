@@ -1,0 +1,11 @@
+install:
+    jb install
+    find lib environments -mindepth 1 -maxdepth 1 -type d -exec sh -c 'cd "{}" && tk tool charts vendor' \;
+
+up-kind:
+    kind create cluster --config=./environments/kind/kind.yaml
+    docker compose -f ./environments/kind/compose.yaml up -d
+
+down-kind:
+    kind delete cluster --config=./environments/kind/kind.yaml
+    docker compose -f ./environments/kind/compose.yaml down

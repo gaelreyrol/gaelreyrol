@@ -1,0 +1,16 @@
+{
+  "lsp": {
+    "jsonnet-language-server": {
+      "settings": {
+        "resolve_paths_with_tanka": true
+      }
+    }
+  },
+  "file_types": {
+    "Helm": [
+      "**/templates/**/*.tpl",
+      "**/templates/**/*.yaml",
+      "**/templates/**/*.yml"
+    ]
+  }
+}

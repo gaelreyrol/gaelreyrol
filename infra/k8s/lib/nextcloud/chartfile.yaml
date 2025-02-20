@@ -1,0 +1,12 @@
+directory: charts
+repositories:
+  - name: nextcloud
+    url: https://nextcloud.github.io/helm/
+  - name: bitnami
+    url: https://charts.bitnami.com/bitnami
+requires:
+  - chart: nextcloud/nextcloud
+    version: 6.6.5
+  - chart: bitnami/redis
+    version: 20.11.3
+version: 1
